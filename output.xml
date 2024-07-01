@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-06-27T14:42:33.902644" rpa="false" schemaversion="5">
+<suite id="s1" name="KnimeSpaceTests" source="C:\Users\Faizan\PycharmProjects\Knime_Test\TestSuites\KnimeSpaceTests.robot">
+<test id="s1-t1" name="LoginTest" line="10">
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-06-27T14:42:34.163532" level="INFO">${URL} = https://hub.knime.com/</msg>
+<arg>${URL}</arg>
+<arg>https://hub.knime.com/</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-06-27T14:42:34.163532" elapsed="0.000996"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-06-27T14:42:34.165528" level="INFO">${BROWSER} = Google Chrome</msg>
+<arg>${BROWSER}</arg>
+<arg>Google Chrome</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-06-27T14:42:34.164753" elapsed="0.000775"/>
+</kw>
+<kw name="Open Browser To Login Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:34.166517" level="INFO">Opening browser 'Google Chrome' to base url 'https://hub.knime.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-27T14:42:34.166517" elapsed="2.517566"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-27T14:42:36.685081" elapsed="0.081789"/>
+</kw>
+<status status="PASS" start="2024-06-27T14:42:34.166136" elapsed="2.600734"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=.primary.accept-button</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:36.767864" elapsed="0.313540"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:37.082437" level="INFO">Clicking button 'css=.primary.accept-button'.</msg>
+<arg>css=.primary.accept-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:37.082437" elapsed="0.148676"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=.button.primary.compact</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:37.231113" elapsed="0.021941"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:37.254050" level="INFO">Clicking button 'css=.button.primary.compact'.</msg>
+<arg>css=.button.primary.compact</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:37.254050" elapsed="3.105743"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=edit-name</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:40.360790" elapsed="0.023037"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=edit-pass</arg>
+<arg>1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:40.384825" elapsed="0.032815"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=edit-submit</arg>
+<arg>1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:40.418711" elapsed="0.022896"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:40.442649" level="INFO">Typing text 'FaizanAbbas' into text field 'id=edit-name'.</msg>
+<arg>id=edit-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:40.442649" elapsed="0.081624"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:40.524273" level="INFO">Typing text 'XYZxyz123$' into text field 'id=edit-pass'.</msg>
+<arg>id=edit-pass</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:40.524273" elapsed="0.086499"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:40.611770" level="INFO">Clicking button 'id=edit-submit'.</msg>
+<arg>id=edit-submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:40.610772" elapsed="2.363852"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:43.110024" level="INFO">Element 'identifier=q' is displayed.</msg>
+<arg>identifier=q</arg>
+<arg>1s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:42.974624" elapsed="0.135400"/>
+</kw>
+<status status="PASS" start="2024-06-27T14:42:34.162820" elapsed="8.948200"/>
+</test>
+<test id="s1-t2" name="AccessingSpace" line="25">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-06-27T14:42:43.111020" level="INFO">${current_datetime} = 2024-06-27--144243</msg>
+<var>${current_datetime}</var>
+<arg>result_format=%Y-%m-%d--%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-06-27T14:42:43.111020" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-06-27T14:42:43.112049" level="INFO">${CURRENT_DATETIME} = 2024-06-27--144243</msg>
+<arg>${CURRENT_DATETIME}</arg>
+<arg>${current_datetime}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-06-27T14:42:43.112049" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-27T14:42:43.112049" level="INFO">${space_name} = SPACE-2024-06-27--144243</msg>
+<var>${space_name}</var>
+<arg>SPACE-${current_datetime}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-27T14:42:43.112049" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-06-27T14:42:43.113052" level="INFO">${SPACE_NAME} = SPACE-2024-06-27--144243</msg>
+<arg>${SPACE_NAME}</arg>
+<arg>${space_name}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-06-27T14:42:43.112049" elapsed="0.001003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-27T14:42:43.113052" level="INFO">Space name: SPACE-2024-06-27--144243</msg>
+<arg>Space name: ${SPACE_NAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-27T14:42:43.113052" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=.avatar-frame</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:43.113052" elapsed="0.295407"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:43.409362" level="INFO">Clicking element 'css=.avatar-frame'.</msg>
+<arg>css=.avatar-frame</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:43.408459" elapsed="0.118532"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=menu-item--0</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:43.527419" elapsed="0.020975"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:43.548394" level="INFO">Clicking element 'id=menu-item--0'.</msg>
+<arg>id=menu-item--0</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:43.548394" elapsed="0.076959"/>
+</kw>
+<status status="PASS" start="2024-06-27T14:42:43.111020" elapsed="0.515331"/>
+</test>
+<test id="s1-t3" name="CreateSpace" line="35">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Your spaces</arg>
+<arg>15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-27T14:42:43.627348" elapsed="1.816325"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:45.444700" level="INFO">Clicking button 'class=button.primary.plus-button'.</msg>
+<arg>class=button.primary.plus-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:45.443673" elapsed="0.072805"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[@title='Save']</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:45.516478" elapsed="0.994834"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:46.511312" level="INFO">Typing text 'SPACE-2024-06-27--144243' into text field '//textarea[@placeholder='Enter private space name']'.</msg>
+<arg>//textarea[@placeholder='Enter private space name']</arg>
+<arg>${SPACE_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:46.511312" elapsed="0.123056"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:46.634368" level="INFO">Clicking button 'xpath=//button[@title='Save']'.</msg>
+<arg>xpath=//button[@title='Save']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:46.634368" elapsed="0.062431"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Space renamed</arg>
+<arg>15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-27T14:42:46.696799" elapsed="2.504609"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-27T14:42:49.203441" level="INFO">Space rename to: SPACE-2024-06-27--144243</msg>
+<arg>Space rename to: ${SPACE_NAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-27T14:42:49.202735" elapsed="0.000706"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>${SPACE_NAME}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-06-27T14:42:49.204442" elapsed="1.566512"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:50.771930" level="INFO">Clicking button 'css=.function-button.single.toggle'.</msg>
+<arg>css=.function-button.single.toggle</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:50.771930" elapsed="0.160819"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[text()=' Make public']</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:50.932749" elapsed="0.310403"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:51.246145" level="INFO">Clicking button 'xpath=//button[text()=' Make public']'.</msg>
+<arg>xpath=//button[text()=' Make public']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:51.245144" elapsed="0.282549"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://input[@placeholder='space name']</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:51.529688" elapsed="0.262328"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:51.793013" level="INFO">Typing text 'SPACE-2024-06-27--144243' into text field 'xpath://input[@placeholder='space name']'.</msg>
+<arg>xpath://input[@placeholder='space name']</arg>
+<arg>${SPACE_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:51.793013" elapsed="0.113207"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[text()='I am sure, make this space public']</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:51.906711" elapsed="0.017289"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:51.925031" level="INFO">Clicking button 'xpath=//button[text()='I am sure, make this space public']'.</msg>
+<arg>xpath=//button[text()='I am sure, make this space public']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:51.925031" elapsed="0.123816"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Space made public</arg>
+<arg>15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-27T14:42:52.048847" elapsed="0.457476"/>
+</kw>
+<status status="PASS" start="2024-06-27T14:42:43.626351" elapsed="8.880976"/>
+</test>
+<test id="s1-t4" name="DeleteSpace" line="52">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Public space</arg>
+<arg>15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-27T14:42:52.508322" elapsed="0.017954"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:52.527272" level="INFO">Clicking button 'css=.function-button.single.toggle'.</msg>
+<arg>css=.function-button.single.toggle</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:52.527272" elapsed="0.070810"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[text()=' Delete space']</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:52.599079" elapsed="0.024933"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:52.625009" level="INFO">Clicking button 'xpath=//button[text()=' Delete space']'.</msg>
+<arg>xpath=//button[text()=' Delete space']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:52.625009" elapsed="0.073824"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://input[@placeholder='space name']</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:52.699906" elapsed="0.229731"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:52.930634" level="INFO">Typing text 'SPACE-2024-06-27--144243' into text field 'xpath://input[@placeholder='space name']'.</msg>
+<arg>xpath://input[@placeholder='space name']</arg>
+<arg>${SPACE_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:52.930634" elapsed="0.106714"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[text()='I understand the consequences, delete space permanently']</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T14:42:53.038345" elapsed="0.019948"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:53.059290" level="INFO">Clicking button 'xpath=//button[text()='I understand the consequences, delete space permanently']'.</msg>
+<arg>xpath=//button[text()='I understand the consequences, delete space permanently']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T14:42:53.059290" elapsed="0.087810"/>
+</kw>
+<status status="PASS" start="2024-06-27T14:42:52.508322" elapsed="0.639776"/>
+</test>
+<test id="s1-t5" name="VerifyDelete" line="61">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Space deleted</arg>
+<arg>15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-27T14:42:53.149124" elapsed="2.434726"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-06-27T14:42:55.615020" level="INFO">Current page does not contain text 'SPACE-2024-06-27--144243'.</msg>
+<arg>${SPACE_NAME}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2024-06-27T14:42:55.583850" elapsed="0.031170"/>
+</kw>
+<status status="PASS" start="2024-06-27T14:42:53.149124" elapsed="2.466920"/>
+</test>
+<status status="PASS" start="2024-06-27T14:42:33.904639" elapsed="21.712377"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="KnimeSpaceTests">KnimeSpaceTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
