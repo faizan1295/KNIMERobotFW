@@ -34,7 +34,8 @@ AccessingSpace
     Click Element    id=menu-item--0
 CreateSpace
     Wait Until Page Contains         Your spaces     15s
-    Click Button    class=button.primary.plus-button
+    ${result}=    Run Keyword And Ignore Error    Click Button    class=button.primary.plus-button
+    Run Keyword If    '${result[0]}' == 'FAIL'    Click Button    class=button.primary
     Wait Until Element Is Visible   xpath=//button[@title='Save']      15s
     Input Text      //textarea[@placeholder='Enter private space name']    ${SPACE_NAME}
     Click Button    xpath=//button[@title='Save']
