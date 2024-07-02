@@ -71,17 +71,6 @@ To run the automated tests, execute the following command in the PyCharm termina
 robot .\TestSuites\KnimeSpaceTests.robot
 ```
 ## Configurations
-In order to run these api test fresh auth token is required. To fetch it perform following actions:
-- Login using following credentials
-- -Username: faizan  - Passwoed: asdasd
-- Perform any action that requires api call like listing spaces
-- Use inspect element to fetch the cookie values
-- In cookies check for the key "knime_hub_auth"
-- Copy the value and set it for the cookie value variable after "knime_hub_auth=<pasted value goes here>" in SpaceManagementTests.java line 25
-
-*** Variables ***
-Update the variables section in the test file i.e. (TestSuites/KnimeSpaceTests.robot file line number 7-8)  with your KNIME Hub account credentials
-
-
+Update the variables section in the test file i.e. (TestSuites/KnimeSpaceTests.robot file line number 7-8)  with your KNIME Hub account credentials.
 ## Contact
 If you have any questions, feel free to contact us at your faizanabbas1295@gmail.com
