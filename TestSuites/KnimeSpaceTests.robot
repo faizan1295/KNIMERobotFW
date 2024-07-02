@@ -67,4 +67,3 @@ VerifyDelete
 Open Browser To Login Page
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-
