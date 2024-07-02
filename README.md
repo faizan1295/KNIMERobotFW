@@ -62,13 +62,6 @@ The tests are designed to perform the following:
 
 Create a Space(public/private): Verify that a new space can be created.
 Delete the Space: Verify that the created space can be deleted.
-### Test Cases
-
-- **LoginTest**: Logs in to the KNIME Hub.
-- **AccessingSpace**: Navigates to the user's spaces.
-- **CreateSpace**: Creates a new space.
-- **DeleteSpace**: Deletes the created space.
-- **VerifyDelete**: Verifies that the space was deleted.
 
 ### Running the Tests
 
