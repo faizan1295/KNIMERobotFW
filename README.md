@@ -57,6 +57,11 @@ Before running the project, ensure you have the following installed:
 
 The automated test case follows the manual steps described above. It uses the Robot Framework with SeleniumLibrary to interact with the web page.
 
+## Test Details
+The tests are designed to perform the following:
+
+Create a Space(public/private): Verify that a new space can be created.
+Delete the Space: Verify that the created space can be deleted.
 ### Test Cases
 
 - **LoginTest**: Logs in to the KNIME Hub.
@@ -72,8 +77,14 @@ To run the automated tests, execute the following command in the PyCharm termina
 ```cmd
 robot .\TestSuites\KnimeSpaceTests.robot
 ```
-## Configuration
-Update the variables section in the test file with your KNIME Hub account credentials:
+## Configurations
+In order to run these api test fresh auth token is required. To fetch it perform following actions:
+- Login using following credentials
+- -Username: faizan  - Passwoed: asdasd
+- Perform any action that requires api call like listing spaces
+- Use inspect element to fetch the cookie values
+- In cookies check for the key "knime_hub_auth"
+- Copy the value and set it for the cookie value variable after "knime_hub_auth=<pasted value goes here>" in SpaceManagementTests.java line 25
 
 *** Variables ***
 ${username}  YourUsername
