@@ -87,8 +87,7 @@ In order to run these api test fresh auth token is required. To fetch it perform
 - Copy the value and set it for the cookie value variable after "knime_hub_auth=<pasted value goes here>" in SpaceManagementTests.java line 25
 
 *** Variables ***
-${username}  YourUsername
-${password}  YourPassword
+Update the variables section in the test file i.e. (TestSuites/KnimeSpaceTests.robot file line number 7-8)  with your KNIME Hub account credentials
 
 
 ## Contact
